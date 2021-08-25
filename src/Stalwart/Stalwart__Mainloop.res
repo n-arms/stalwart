@@ -1,4 +1,3 @@
-open Belt
 open Promise
 open Webapi.Dom
 open Stalwart__Node
