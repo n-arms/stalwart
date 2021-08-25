@@ -29,6 +29,23 @@ let p :
     => array<html<'msg>>
     => html<'msg> = (attrs, elems) =>
         node("p", attrs, elems)
+let h1 : 
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("h1", attrs, elems)
+
+let div :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("div", attrs, elems)
+
+let button :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("button", attrs, elems)
 
 let text :
     string

@@ -28,3 +28,11 @@ let styles :
                         root -> Element.setAttribute("style", styles))
     }
 
+let onClick :
+    'msg
+    => attribute<'msg> = msg => {
+        eval: root =>
+            Promise.make((resolve, _) =>
+                root -> Element.addEventListener("click", _ => resolve(. msg)))
+
+    }
