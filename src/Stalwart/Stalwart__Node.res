@@ -1,11 +1,8 @@
 open Belt
 open Webapi.Dom
+open Stalwart__Attribute
 
 type html<'msg> = {
-    eval: Element.t => Promise.t<'msg>
-}
-
-type attribute<'msg> = {
     eval: Element.t => Promise.t<'msg>
 }
 
