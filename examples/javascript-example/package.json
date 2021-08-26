@@ -1,0 +1,16 @@
+{
+  "name": "javascript-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build --prefix ../.. && cp -R ../../src/* . && python3 -m http.server 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rescript": "^9.1.4"
+  }
+}

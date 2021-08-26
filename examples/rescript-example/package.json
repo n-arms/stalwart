@@ -1,0 +1,19 @@
+{
+  "name": "rescript-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build --prefix ../.. && cp -R ../../src/* ./src && rescript && python3 -m http.server 8080",
+    "clean": "rescript clean -with-deps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "rescript": "^9.1.4",
+    "rescript-webapi": "^0.1.1"
+  }
+}
