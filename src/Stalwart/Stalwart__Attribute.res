@@ -1,8 +1,12 @@
 open Belt
 open Webapi.Dom
 
+type msg<'msg> = 
+    | Msg('msg)
+    | Reroute
+
 type attribute<'msg> = {
-    eval: Element.t => Promise.t<'msg>
+    eval: Element.t => Promise.t<msg<'msg>>
 }
 
 let props :
@@ -33,6 +37,6 @@ let onClick :
     => attribute<'msg> = msg => {
         eval: root =>
             Promise.make((resolve, _) =>
-                root -> Element.addEventListener("click", _ => resolve(. msg)))
+                root -> Element.addEventListener("click", _ => resolve(. Msg(msg))))
 
     }

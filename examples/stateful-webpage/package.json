@@ -1,0 +1,20 @@
+{
+  "name": "rescript-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build --prefix ../.. && cp -R ../../src ./node_modules/Stalwart && cp ../../bsconfig.json ./node_modules/Stalwart/bsconfig.json && cp ../../package.json ./node_modules/Stalwart/package.json && rescript build -with-deps && python3 -m http.server 8000",
+    "clean": "rescript clean -with-deps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "rescript": "^9.1.4",
+    "rescript-webapi": "^0.1.1",
+    "Stalwart": "^0.0.0"
+  }
+}
