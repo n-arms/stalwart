@@ -34,6 +34,31 @@ let h1 :
     => array<html<'msg>>
     => html<'msg> = (attrs, elems) =>
         node("h1", attrs, elems)
+let h2 : 
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("h2", attrs, elems)
+let h3 : 
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("h3", attrs, elems)
+let h4 : 
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("h4", attrs, elems)
+let h5 : 
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("h5", attrs, elems)
+let h6 : 
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("h6", attrs, elems)
 
 let div :
     array<attribute<'msg>>
@@ -70,6 +95,31 @@ let li :
     => array<html<'msg>>
     => html<'msg> = (attrs, elems) =>
         node("li", attrs, elems)
+let table :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("table", attrs, elems)
+let th :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("th", attrs, elems)
+let tr :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("tr", attrs, elems)
+let td :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("td", attrs, elems)
+
+let img :
+    array<attribute<'msg>>
+    => html<'msg> = attrs =>
+        node("img", attrs, [])
 
 let text :
     string
@@ -80,3 +130,7 @@ let text :
             Promise.make((_, _) => ())
         }
     }
+
+
+
+

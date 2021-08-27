@@ -8,6 +8,11 @@ type page = Page1 | Page2
 
 let init = Page1
 let update = (msg, _) => msg
+let tableStyle = 
+    styles([
+        ("border", "1px solid black"),
+        ("border-collapse", "collapse")
+    ])
 let mainInfo = page =>
     switch page {
         | Page1 => p([], [
@@ -21,10 +26,58 @@ let mainInfo = page =>
                 li([], [text("cats")]),
                 li([], [text("dogs")]),
                 li([], [text("fish")]),
+            ]),
+            text("here is a table of primary colors"),
+            table([tableStyle], [
+                tr([tableStyle], [
+                    th([tableStyle], [
+                        text("color 1")
+                    ]),
+                    th([tableStyle], [
+                        text("color 2")
+                    ]),
+                    th([tableStyle], [
+                        text("color 3")
+                    ]),
+                ]),
+                tr([tableStyle], [
+                    td([tableStyle], [
+                        text("red")
+                    ]),
+                    td([tableStyle], [
+                        text("blue")
+                    ]),
+                    td([tableStyle], [
+                        text("yellow")
+                    ]),
+                ]),
             ])
         ])
 
-        | Page2 => p([], [text("page 2: its kinda boring really")])
+        | Page2 => div([], [
+            p([], [
+                text("page 2: its kinda boring really, "),
+            ]),
+            a(
+                [
+                    props([
+                        ("href", "https://github.com/n-arms/stalwart")
+                    ])
+                ],
+                [
+                    text("but you can fnd the stalwart source code here")
+                ]
+            ),
+            p([], [
+                text("oh and here are some titles"),
+                h1([], [text("h1")]),
+                h2([], [text("h2")]),
+                h3([], [text("h3")]),
+                h4([], [text("h4")]),
+                h5([], [text("h5")]),
+                h6([], [text("h6")]),
+            ]),
+        ])
     }
 
 let view = model => 
