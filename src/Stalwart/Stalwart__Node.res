@@ -47,6 +47,30 @@ let button :
     => html<'msg> = (attrs, elems) =>
         node("button", attrs, elems)
 
+let a :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("a", attrs, elems)
+        
+let ol :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("ol", attrs, elems)
+
+let ul :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("ul", attrs, elems)
+
+let li :
+    array<attribute<'msg>>
+    => array<html<'msg>>
+    => html<'msg> = (attrs, elems) =>
+        node("li", attrs, elems)
+
 let text :
     string
     => html<'msg> = str => {

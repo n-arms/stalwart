@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build --prefix ../.. && cp -R ../../src ./node_modules/Stalwart && cp ../../bsconfig.json ./node_modules/Stalwart/bsconfig.json && cp ../../package.json ./node_modules/Stalwart/package.json && rescript build -with-deps && python3 -m http.server 8000",
+    "build": "npm run build --prefix ../.. && cp -R ../../src ./node_modules/Stalwart && cp ../../bsconfig.json ./node_modules/Stalwart/bsconfig.json && cp ../../package.json ./node_modules/Stalwart/package.json && rescript build -with-deps && python3 -m http.server 8080",
     "clean": "rescript clean -with-deps"
   },
   "keywords": [],

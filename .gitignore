@@ -6,3 +6,5 @@ node_modules/
 lib/
 npm-debug.log
 *.bs.js
+examples/javascript-example/
+examples/typescript-example/

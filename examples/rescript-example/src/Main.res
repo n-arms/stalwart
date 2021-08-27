@@ -1,6 +1,9 @@
-open Stalwart__Attribute
-open Stalwart__Node
-open Stalwart__Mainloop
+// open Stalwart.Stalwart__Attribute
+open Stalwart.Attribute
+//open Stalwart.Stalwart__Node
+open Stalwart.Node
+//open Stalwart.Stalwart__Mainloop
+open Stalwart.Mainloop
 open Belt
 open Webapi.Dom
 
