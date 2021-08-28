@@ -132,6 +132,15 @@ let text :
         }
     }
 
-
+let literal :
+    string
+    => html<'msg> = str => {
+        eval: root => {
+            let node = document -> Document.createElement("div")
+            root -> Element.appendChild(node)
+            node -> Element.setInnerHTML(str)
+            Promise.make((_, _) => ())
+        }
+    }
 
 

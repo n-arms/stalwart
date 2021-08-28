@@ -27,6 +27,7 @@ let mainInfo = page =>
                 li([], [text("dogs")]),
                 li([], [text("fish")]),
             ]),
+            literal("<p>here is a literal p tag</p>"),
             text("here is a table of primary colors"),
             table([tableStyle], [
                 tr([tableStyle], [

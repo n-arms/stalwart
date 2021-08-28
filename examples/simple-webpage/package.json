@@ -15,6 +15,6 @@
     "@ryyppy/rescript-promise": "^2.1.0",
     "rescript": "^9.1.4",
     "rescript-webapi": "^0.1.1",
-    "Stalwart": "^0.0.0"
+    "@n-arms/stalwart": "^0.0.0"
   }
 }
