@@ -1,5 +1,5 @@
 {
-  "name": "Stalwart",
+  "name": "@n-arms/stalwart",
   "version": "0.0.1",
   "sources": {
     "dir" : "src",
