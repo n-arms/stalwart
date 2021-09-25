@@ -12,7 +12,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@ryyppy/rescript-promise": "^2.1.0",
     "rescript": "^9.1.4",
     "rescript-webapi": "^0.1.1"
   }

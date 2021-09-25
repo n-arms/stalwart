@@ -4,7 +4,7 @@ open Stalwart__Attribute
 
 
 type html<'msg> = {
-    eval: Element.t => Promise.t<msg<'msg>>
+    eval: Element.t => Js.Promise.t<msg<'msg>>
 }
 
 let node : 
@@ -21,7 +21,7 @@ let node :
                 -> Js.Array.concat(
                     attrs
                         -> Array.map(attr => attr.eval(node)))
-                -> Promise.race
+                -> Js.Promise.race
         }
     }
 
@@ -128,7 +128,7 @@ let text :
         eval: root => {
             let node = document -> Document.createTextNode(str)
             root -> Element.appendChild(node)
-            Promise.make((_, _) => ())
+            Js.Promise.make((~resolve as _, ~reject as _) => ())
         }
     }
 
@@ -139,7 +139,7 @@ let literal :
             let node = document -> Document.createElement("div")
             root -> Element.appendChild(node)
             node -> Element.setInnerHTML(str)
-            Promise.make((_, _) => ())
+            Js.Promise.make((~resolve as _, ~reject as _) => ())
         }
     }
 

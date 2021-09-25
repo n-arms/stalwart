@@ -6,14 +6,14 @@ type msg<'msg> =
     | Reroute
 
 type attribute<'msg> = {
-    eval: Element.t => Promise.t<msg<'msg>>
+    eval: Element.t => Js.Promise.t<msg<'msg>>
 }
 
 let props :
     array<(string, string)>
     => attribute<'msg> = attrs => {
         eval: root =>
-            Promise.make((_, _) =>
+            Js.Promise.make((~resolve as _, ~reject as _) =>
                 attrs
                     -> Array.forEach(((key, value)) =>
                         root -> Element.setAttribute(key, value)))
@@ -23,7 +23,7 @@ let styles :
     array<(string, string)>
     => attribute<'msg> = styles => {
         eval: root =>
-            Promise.make((_, _) =>
+            Js.Promise.make((~resolve as _, ~reject as _) =>
                 styles
                     -> Array.map(((key, value)) =>
                         key ++ ":" ++ value ++ ";")
@@ -36,7 +36,7 @@ let onClick :
     'msg
     => attribute<'msg> = msg => {
         eval: root =>
-            Promise.make((resolve, _) =>
+            Js.Promise.make((~resolve, ~reject as _) =>
                 root -> Element.addEventListener("click", _ => resolve(. Msg(msg))))
 
     }
