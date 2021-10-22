@@ -40,3 +40,19 @@ let onClick :
                 root -> Element.addEventListener("click", _ => resolve(. Msg(msg))))
 
     }
+
+let onMouseOver : 
+    'msg
+    => attribute<'msg> = msg => {
+        eval: root =>
+            Js.Promise.make((~resolve, ~reject as _) =>
+                root -> Element.addEventListener("mouseover", _ => resolve(. Msg(msg))))
+    }
+
+let onMouseOut : 
+    'msg
+    => attribute<'msg> = msg => {
+        eval: root =>
+            Js.Promise.make((~resolve, ~reject as _) =>
+                root -> Element.addEventListener("mouseout", _ => resolve(. Msg(msg))))
+    }
